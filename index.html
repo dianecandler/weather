@@ -22,18 +22,60 @@
 </head>
 
 <body>
-  <!-- identify variables to work with -->
-  <div class="city"></div>
+<header class="bg-dark text-center">
+    <h1 class="text-center text-white ">Weather Dashboard</h1>
+</header>
+
+<div class="row"></div>
+
+
+    <div class="col-4 form-inline"> <!--check col size - could use bootstrap items here!-->
+        <button class="col-3 btn-online btn" type="submit">submit</button>
+        <!-- <button type="button" class="btn btn-secondary btn-sm">Small button</button> not sure what to put in here for button -->
+        <input class="col-6 form-control" type="search" placeholder="here"></input>
+        
+        <!-- Bootstrap option for inputs
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          </div> -->
+
+
+        <ul> <!--need to automate this in JS but using to create layout-->
+            <!-- source for this:  https://getbootstrap.com/docs/4.5/components/list-group/ -->
+            <li>Austin, TX</li>
+            <li>Bartlett, TX</li>
+        </ul>
+    </div>
+    <!--Daniel recommended ordering row parent with two column children so trying this out-->
+    <div class="col-8"> <!--right side to display city specifics w/5-day below-->
+        <div class="row">
+            <div class="jumbotron jumbotron-fluid"> <!--bootstrap-->
+                <div class="currentD">  <!--div for current day forcast, above 5 day-->
+                    <h3 class="display-4">Today's Forecast</h3>
+                    <p class="lead">Here is your current conditions:</p> <!--don't think I need this but copied from Bootstrap-->
+                </div>
+          </div>
+        </div>
+
+    
+        <div class="row">
+            <div class="5D"> <!--div for 5 day forecast under today's forecast-->
+                <h3 class="display-4">5 Day Forecast</h3>
+            </div>
+        </div>
+    </div>
+  <!-- NOTES for Diane - identify variables to work with -->
+  <!-- <div class="city"></div>
   <div class="date"></div>
   <div class="wind"></div>
   <div class="humidity"></div>
   <div class="UV"></div>
-  <div class="temp"></div>
+  <div class="temp"></div> -->
 
 
-
-
-  
   <!-- JavaScript links -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./assets/scripts.js"></script>
