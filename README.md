@@ -13,7 +13,7 @@ Diane's Weather Dashboard
 9. [] link icons to weather conditions
 10.[] work css to meet display or look and feel needs
 11.[] look for ways to minimize and present clean code
-12.[] update Readme 
+12.[] update Readme with additional psuedo code and comments for the project
 
 Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
