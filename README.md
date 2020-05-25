@@ -2,19 +2,39 @@
 # 06 Server-Side APIs: Weather Dashboard
 
 Diane's Weather Dashboard
-1. [] Identify bootstrap needed and plug into HTML, CSS before going to JS
-2. [] Ensure and plug in API code is in JS
-3. [] organize HTML and bootstrap elements before starting data query coding
-4. [] work on user input city search and local storage for search history
-5. [] set up search city assets - wind temp UV humidity 
-6. [] set up bootstrap boxes for 5 day forecast
-7. [] set up search query for 5 day forcast
-8. [] find icons for weather and add to file
-9. [] link icons to weather conditions
-10.[] work css to meet display or look and feel needs
-11.[] look for ways to minimize and present clean code
-12.[] update Readme with additional psuedo code and comments for the project
+1. [x] Diagram project layout - column/rows
+2. [x] Confirm API works, generate data needed for project, 
+        using JQuery, Ajax, JSON
+3. []  Identify bootstrap needed and plug into HTML, CSS 
+4. []  organize JS code into HTML and bootstrap
+5. []  Display current city data in CSS container
+6. []  Create 5 day data in JS
+7. []  Tweak bootstrap boxes for 5 day forecast
+8. []  Create user input/search box for city choice
+9. []  Create display history boxes
+10.[]  Nice to have cities populated in empty history boxes
+11.[]  Set up local storage for cities
+12.[]  Incrementally add search city & delete forced city
+13.[]  Finalize CSS and clean up files
+14.[]  Complete README.md with helpful links, learning, etc.
+15.[]  Finalize GitHub and submit work in UT Bootcamp Folder
 
++ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + 
+See DianeDiagram_HWweather1.png in Assets folder for design 
++ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + 
+
+Lessons Learned:  
+ - Diagramming project simplified col/row planning
+ - Having tutor/TA resources available to help with setting up the API links when I needed assistance was the biggest concern for this project.
+ - Starting with HTML before ensuring API worked added stress.
+ - Once API links worked, creating the design and data scope creep challenges that had to be checked often.
+
+Helpful link:  https://www.youtube.com/watch?v=InoAIgBZIEA
+OpenWeather:  https://openweathermap.org
+    Used 2 APIs in order to get all attributes desired 
+
+
+==============================================================
 Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
 Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. The documentation includes a section called "How to start" that will provide basic setup and usage instructions. Use `localStorage` to store any persistent data.

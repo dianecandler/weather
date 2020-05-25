@@ -1,3 +1,11 @@
+<!-- Diane's psuedo code for Saturday -->
+<!-- 1. Get weater api into JS file correctly -->
+<!-- 2. Link to display main city -->
+<!-- 3. Once basic link is established, work on HTML with Grid to match planned format -->
+<!-- container with 2 containers; (a)1 col 33% & row; (b) col 66% w/2 rows & 2nd row has 5 col -->
+<!-- 4. Activate current city with all attributes linked in current forecast -->
+<!-- 5. Establish links (of knowledge to do this) for 5 day forcast -->
+<!-- 6. Figure out where to source icons and create links in HTML  -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,148 +15,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- CSS, Bootstrap links -->
-    <link rel="stylesheet" href="https://unpkg.com/@popperjs/core@2">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <!-- jQuery links -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- CSS link -->
     <link rel="stylesheet" href="./assets/style.css" />
   
     <title>HW-06 Weather Dashboard</title>
 </head>
+<!-- <style>
+.item1{grid-area: menu; }
+    .item2{grid-area: main; }
+    .item3{grid-area: five;}
+    .item4{grid-area: six;}
+.gridContainer{
+display: grid;
+grid-template-areas:
+'menu five five five five five';
+grid-gap: 10px;
+background-color: lightblue;
+color:white;
+padding:20px 0;
+}
+.gridContainer > div{
+    background-color: lightgray;
+    text-align: center;
+    padding:20px 0;
+    font-size: 20px;
+}
+</style -->
 
 <body>
 <header class="bg-dark text-center">
     <h1 class="text-center text-white ">Weather Dashboard</h1>
 </header>
 
-<!-- stuff from old file -->
-<header class="bg-dark text-center">
-  <h1 class="text-center text-white ">Weather Dashboard</h1>
-</header>
-
-<div class="row"></div>
-
-
-  <div class="col-4 form-inline"> <!--check col size - could use bootstrap items here!-->
-      <button class="col-3 btn-online btn" type="submit">submit</button>
-      <!-- <button type="button" class="btn btn-secondary btn-sm">Small button</button> not sure what to put in here for button -->
-      <input class="col-6 form-control" type="search" placeholder="here"></input>
-      
-      <!-- Bootstrap option for inputs
-      <div class="input-group input-group-sm mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
-          </div>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+<!-- column 1 has Search and buttons for cities -->
+<div class="city-container">
+    <!--city search-->
+        <!-- <strong>Search for a City:</strong><br>
+        <div class="search-container"> -->
+        <!--put in city search function here-->
+            <!-- <form>
+                <input type="text" placeholder="Search..." name="search" id="searchArea">
+                <button id="searchBtn">Submit</button>
+            </form>
         </div> -->
+        <!--Change to bootstrap buttons or dropdown OR add links & make cities clickable-->
+            <!-- city: <h1 id="city1"></h1>
+            temperature: <h5 id="temp"></h5>
+            icon: <img class="icon">
+            <button id="city3">New York</button> -->
+            <!-- <button id="city4">Orlando</button>
+            <button id="city5">San Francisco</button>
+            <button id="city6">Seattle</button>
+            <button id="city7">Denver</button>
+            <button id="city8">Atlanta</button> -->
+    <!-- </div>
+</div>-->
 
+<!-- column 2 needs 2 rows; 2nd has 5 col for 5-day -->
+<div class="weather-container">
+    <p class="name">City of </p>
+    <img class="icon">
+    <p class="weather"></p>
+    <p class="temp">Temperature in fahrenheit: </p>
+    <p class = "humidity">Humidity %: </p>
+    <p class="wind">Wind (mph): </p>
+    <p class="uv"> UV Index (0-11+): </p>
+</div>
 
-      <ul> <!--need to automate this in JS but using to create layout-->
-          <!-- source for this:  https://getbootstrap.com/docs/4.5/components/list-group/ -->
-          <li>Austin, TX</li>
-          <li>Bartlett, TX</li>
-      </ul>
-  </div>
-  <!--Daniel recommended ordering row parent with two column children so trying this out-->
-  <div class="col-8"> <!--right side to display city specifics w/5-day below-->
-      <div class="row">
-          <div class="jumbotron jumbotron-fluid"> <!--bootstrap-->
-              <div class="currentD">  <!--div for current day forcast, above 5 day-->
-                  <h3 class="display-4">Today's Forecast</h3>
-                  <p class="lead">Here is your current conditions:</p> <!--don't think I need this but copied from Bootstrap-->
-              </div>
+<div class="row">
+    <div class="col-lg-4 text-left">
+        <!--put here  -->
+        <!--city search-->
+        <!-- <strong>Search for a City:</strong><br>
+        <div class="search-container"> -->
+        <!--put in city search function here-->
+            <!-- <form>
+                <input type="text" placeholder="Search..." name="search" id="searchArea">
+                <button id="searchBtn">Submit</button>
+            </form>
+        </div> -->
+        <!--Change to bootstrap buttons or dropdown OR add links & make cities clickable-->
+            <!-- city: <h1 id="city1"></h1>
+            temperature: <h5 id="temp"></h5>
+            icon: <img class="icon">
+            <button id="city3">New York</button> -->
+            <!-- <button id="city4">Orlando</button>
+            <button id="city5">San Francisco</button>
+            <button id="city6">Seattle</button>
+            <button id="city7">Denver</button>
+            <button id="city8">Atlanta</button> -->
+    <!-- </div>
+    
+    <div class="column-66"> -->
+        <!--weather display-->
+        <!-- <div class="row" id="day0"> -->
+             <!-- Current day weather
+            <div id="Title"></div>
+            <div id="day0temp"></div> 
+            <div id="day0humid"></div>
+            <div id="day0wind"></div>
+            <div id="uvindex"></div>
         </div>
-      </div>
-
-  
-      <div class="row">
-          <div class="5D"> <!--div for 5 day forecast under today's forecast-->
-              <h3 class="display-4">5 Day Forecast</h3>
-          </div>
-      </div>
-  </div>
-<!-- NOTES for Diane - identify variables to work with -->
-<!-- <div class="city"></div>
-<div class="date"></div>
-<div class="wind"></div>
-<div class="humidity"></div>
-<div class="UV"></div>
-<div class="temp"></div> -->
-
-<!-- Start with VSC here -->
-
-<div class="row"></div>
-
-    <div class="col-4 form-inline"> <!--check col size - using bootstrap items here!-->
-      <!-- Submit button -->
-      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
+        <div class="row">
+            <h3>5-Day Forecast</h3>
         </div>
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <div class="input-group-text" id="btnGroupAddon">Submit</div>
-          </div>
-          <input type="text" class="form-control" placeholder="Enter City to Search" aria-label="Input group example" aria-describedby="btnGroupAddon">
-        </div>
-      </div>
-    <!-- dropdown cities  -->
-    <div class="btn-group">
-      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Right-aligned menu
-      </button>
-      <div class="dropdown-menu dropdown-menu-right">
-        <button class="dropdown-item" type="button">Action</button>
-        <button class="dropdown-item" type="button">Another action</button>
-        <button class="dropdown-item" type="button">Something else here</button>
-      </div>
+        <div class="row" id="future">
+            <div class="column" id="day1">
+                <div id="1date"></div>
+                <div id="1icon"></div>
+                <div id="1temp"></div>
+                <div id="1humid"></div>
+            </div>
+        </div> 
     </div>
-     
-        <!-- Bootstrap option for inputs
-        <div class="input-group input-group-sm mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
-            </div>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-          </div> -->
-          <!-- source for this:  https://getbootstrap.com/docs/4.5/components/list-group/ -->
+</div> -->
 
-      <!-- converting to buttons so user can click past city searches -->
-      <!-- <button id="city1">Austin</button>
-      <button id="city2">Dallas</button>
-      <button id="city3">San Antonio</button>
-      <button id="city4">Houston</button>
-      <button id="city5">San Francisco</button>
-      <button id="city6">Miami</button>
-      <button id="city7">Atlanta</button>
-      <button id="city8">New York</button>
-    </div> -->
-  </div>
-    <!--Daniel recommended ordering row parent with two column children so trying this out-->
-    <div class="col-8"> <!--right side to display city specifics w/5-day below-->
-        <div class="row">
-            <!-- <div class="jumbotron jumbotron-fluid"> -->
-          <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-            <h1 class="display-4">Fluid jumbotron</h1>
-            <p class="lead">Here are the current conditions</p>
-          </div>
-        </div>
-   
-        <div class="row">
-            <div class="5Day"> <!--div for 5 day forecast under today's forecast-->
-                <h3 class="display-4">5 Day Forecast</h3>
-            </div>
-        </div>
-  </div>
-  <!-- NOTES for Diane - identify variables to work with -->
-  <!-- <div class="city"></div>
-  <div class="date"></div>
-  <div class="wind"></div>
-  <div class="humidity"></div>
-  <div class="UV"></div>
-  <div class="temp"></div> -->
-
+<!-- erase above -->
+    <!-- </div>
+    <div class="col-lg-8 col-lg-offset-4 text-center">
+        <h2>City: <span id="city"></span></h2>
+        <h2>Main Weather: <span id="main_weather"></span></h2>
+        <h2>Description: <span id="description_weather"></span></h2>
+        <img id="weather_image" src="">
+        <h2>Temperature: <span id="temperature"></span></h2>
+        <h2>Pressure: <span id="pressure"></span></h2>
+        <h2>Humidity: <span id="humidity"></span></h2>
+    </div>
+</div> -->
 
   <!-- JavaScript links -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
