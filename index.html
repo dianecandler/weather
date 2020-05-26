@@ -24,35 +24,40 @@
   
     <title>HW-06 Weather Dashboard</title>
 </head>
-<!-- <style>
-.item1{grid-area: menu; }
-    .item2{grid-area: main; }
-    .item3{grid-area: five;}
-    .item4{grid-area: six;}
-.gridContainer{
-display: grid;
-grid-template-areas:
-'menu five five five five five';
-grid-gap: 10px;
-background-color: lightblue;
-color:white;
-padding:20px 0;
-}
-.gridContainer > div{
-    background-color: lightgray;
-    text-align: center;
-    padding:20px 0;
-    font-size: 20px;
-}
-</style -->
+
 
 <body>
 <header class="bg-dark text-center">
     <h1 class="text-center text-white ">Weather Dashboard</h1>
 </header>
-
+<div class="wrapper">
 <!-- column 1 has Search and buttons for cities -->
-<div class="city-container">
+<div class="city-container"> <!-- area on left for city search and city buttons-->
+    <div class="row">
+        <div class="column-33"> <!--area for city search -->
+            <strong>Search for a City: </strong>
+            <div class="search-container">
+                <!-- city search function -->
+                <form>
+                    <input id="searchArea" type="text" placeholder="Search..." name="search">
+<!--                <button id="searchBtn" type="submit" ><i class="fa fa-search"></i></button> -->
+                </form>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+        <div class="column-33"> <!-- area for cities-->
+        <div class="store-container">
+            <form>  
+                <!--this leaves a small box - needs help!  -->
+                <button id="searchBtn" type="submit" ><i class="fa fa-search"></i></button>
+            </form>
+
+        </div>
+        </div>
+    </div>    
+        
+
     <!--city search-->
         <!-- <strong>Search for a City:</strong><br>
         <div class="search-container"> -->
@@ -146,7 +151,7 @@ padding:20px 0;
         <h2>Humidity: <span id="humidity"></span></h2>
     </div>
 </div> -->
-
+</div>
   <!-- JavaScript links -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./assets/scripts.js"></script>

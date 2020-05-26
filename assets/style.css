@@ -1,6 +1,31 @@
 body {
     background-color:lightskyblue
 }
+.city-container {
+    padding-left: 2%;
+    font-size: 14;
+    margin-top: 2%
+    ;
+}
+/* .item1{grid-area: menu; }
+    .item2{grid-area: main; }
+    .item3{grid-area: five;}
+    .item4{grid-area: six;}
+.gridContainer{
+display: grid;
+grid-template-areas:
+'menu five five five five five';
+grid-gap: 10px;
+background-color: lightblue;
+color:white;
+padding:20px 0;
+}
+.gridContainer > div{
+    background-color: lightgray;
+    text-align: center;
+    padding:20px 0;
+    font-size: 20px;
+} */
 
 
 
