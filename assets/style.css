@@ -1,11 +1,13 @@
 body {
-    background-color:lightskyblue
+	background-color: lightskyblue;
 }
 .city-container {
-    padding-left: 2%;
-    font-size: 14;
-    margin-top: 2%
-    ;
+	padding-left: 2%;
+	font-size: 14;
+	margin-top: 2%;
+}
+.lead {
+    justify-content: top;
 }
 /* .item1{grid-area: menu; }
     .item2{grid-area: main; }
@@ -26,6 +28,3 @@ padding:20px 0;
     padding:20px 0;
     font-size: 20px;
 } */
-
-
-

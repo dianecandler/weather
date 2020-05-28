@@ -30,32 +30,74 @@
 <header class="bg-dark text-center">
     <h1 class="text-center text-white ">Weather Dashboard</h1>
 </header>
-<div class="wrapper">
-<!-- column 1 has Search and buttons for cities -->
-<div class="city-container"> <!-- area on left for city search and city buttons-->
+<div class="container">
+
+    <!-- column 1 has Search and buttons for cities -->
+  <div class="city-container"> <!-- area on left for city search and city buttons-->
     <div class="row">
-        <div class="column-33"> <!--area for city search -->
+
+
+        <div class="col-3"> <!--area for city search -->
             <strong>Search for a City: </strong>
             <div class="search-container">
                 <!-- city search function -->
                 <form>
-                    <input id="searchArea" type="text" placeholder="Search..." name="search">
-<!--                <button id="searchBtn" type="submit" ><i class="fa fa-search"></i></button> -->
+                    <input id="searchArea" type="text" placeholder="enter city to search" name="search">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <!-- <button id="searchBtn" type="submit" ><i class="fa fa-search"></i></button> -->
                 </form>
+                    <p></p>
+
+                <!-- rework buttons for stored cities -->
+              
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                      Last Cities Searched
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">Miami</a>
+                    <a href="#" class="list-group-item list-group-item-action">New York</a>
+                    <a href="#" class="list-group-item list-group-item-action">San Francisco</a>
+                    <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Salt Lake City</a>
+                </div>
             </div>
         </div>
     </div>
+  </div>
+</div>
+<p></p>
+  <div class="col-9"> <!-- area for cities-->
+    <div class="jumbotron">
+        <h4 class="text-4">Your Current Conditions</h4>
+        <hr class="my-4">
+        <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> -->
         <div class="row">
-        <div class="column-33"> <!-- area for cities-->
-        <div class="store-container">
-            <form>  
-                <!--this leaves a small box - needs help!  -->
-                <button id="searchBtn" type="submit" ><i class="fa fa-search"></i></button>
-            </form>
+          <div class="weather-container">
+            <p class="name">City of </p>
+            <img class="icon">
+            <p class="weather"></p>
+            <p class="temp">Temperature in fahrenheit: </p>
+            <p class = "humidity">Humidity %: </p>
+            <p class="wind">Wind (mph): </p>
+            <p class="uv"> UV Index (0-11+): </p>
+          </div>
+        </div>
 
-        </div>
-        </div>
-    </div>    
+        <div class="row">
+           <div class="card" style="width: 10rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">City</h6>
+              <p class="card-text">weather icon</p>
+              <p class="card-text">temp</p>
+              <p class="card-text">other</p>
+            </div>
+          </div>
+        </div>  
+
+
+    </div>
+ </div>
+
         
 
     <!--city search-->
@@ -81,18 +123,10 @@
 </div>-->
 
 <!-- column 2 needs 2 rows; 2nd has 5 col for 5-day -->
-<div class="weather-container">
-    <p class="name">City of </p>
-    <img class="icon">
-    <p class="weather"></p>
-    <p class="temp">Temperature in fahrenheit: </p>
-    <p class = "humidity">Humidity %: </p>
-    <p class="wind">Wind (mph): </p>
-    <p class="uv"> UV Index (0-11+): </p>
-</div>
 
-<div class="row">
-    <div class="col-lg-4 text-left">
+
+<!-- <div class="row"> -->
+    <!-- <div class="col-lg-4 text-left"> -->
         <!--put here  -->
         <!--city search-->
         <!-- <strong>Search for a City:</strong><br>
@@ -151,7 +185,7 @@
         <h2>Humidity: <span id="humidity"></span></h2>
     </div>
 </div> -->
-</div>
+<!-- </div> -->
   <!-- JavaScript links -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./assets/scripts.js"></script>
