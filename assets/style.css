@@ -1,14 +1,27 @@
 body {
 	background-color: lightskyblue;
+	color: darknavy;
 }
 .city-container {
-	padding-left: 2%;
-	font-size: 14;
-	margin-top: 2%;
+	font-size: 12;
+	margin-top: 1%;
 }
-.lead {
-    justify-content: top;
+.weather-container {
+	font-size: 12px;
+	color: navy;
 }
+.card-body {
+    background-color: white;
+
+}
+.days {
+    
+}
+
+/* #days {
+    padding: 1px;
+    justify-content: center;
+} */
 /* .item1{grid-area: menu; }
     .item2{grid-area: main; }
     .item3{grid-area: five;}
