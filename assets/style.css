@@ -1,27 +1,47 @@
 body {
-	background-color: lightskyblue;
+	background-color: black;
 	color: darknavy;
 }
 .city-container {
-	font-size: 12;
+	font-size: 16px;
 	margin-top: 1%;
+	padding: 2%;
 }
 .weather-container {
-	font-size: 12px;
-	color: navy;
+	font-size: 100%;
+    color: navy;
+    text-align: center;
+    background-color: lightskyblue;
+    padding: 2% 65% 2% 1%;
+    text-align: center;
+    margin: 5px;
+}
+.container {
+    justify-content: center;
 }
 .card-body {
-    background-color: white;
-
+	background-color: grey;
 }
-.days {
-    
+h5 {
+	justify-content: center;
 }
-
-/* #days {
-    padding: 1px;
+.jumbotron {
     justify-content: center;
-} */
+    font-weight: bold;
+    padding:1% 1% 1% 5%;
+    color:grey;
+    background-color:navy;
+}
+.container-5D {
+    color:navy;
+    margin-inline-start: auto;
+    padding: 2;
+    font-size: smallest(10px);
+}
+h6 {
+    font-size: large; 
+    color: white;
+}
 /* .item1{grid-area: menu; }
     .item2{grid-area: main; }
     .item3{grid-area: five;}
