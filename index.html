@@ -15,13 +15,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- CSS, Bootstrap links -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <!-- jQuery links -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- CSS link -->
-    <link rel="stylesheet" href="./assets/style.css"/>
-  
+    <link rel="stylesheet" href="./assets/style.css" />
+
     <title>HW-06 Weather Dashboard</title>
 </head>
 
@@ -30,142 +30,176 @@
         <h1 class="text-center text-white ">Weather Dashboard</h1>
     </header>
 
-  <div class="container-fluid">
+    <div class="container-fluid">
 
-    <div class="container-fluid"> <!--area for city search -->
-        <div class="row justify-content-start">
-             <div class="col-2"> 
+        <div class="container-fluid">
+            <!--area for city search -->
+            <div class="row justify-content-start">
+                <div class="col-2">
                     <strong>Search for a City: </strong>
-                    <div class="search-container"> <!-- city search function -->
+                    <div class="search-container">
+                        <!-- city search function -->
                         <form>
                             <input id="searchArea" type="text" placeholder="  Enter city to search  " name="search">
                             <button id="searchBtn" type="submit" class="btn btn-primary">Submit</button>
-                        </form>          
-                        <div class="list-group">
-                            <!-- <a href="#" class="list-group-item list-group-item-action active">
-                            Last Cities Searched
-                            </a> -->
-                            <a href="#" class="list-group-item list-group-item-action"></a>
-                            <a href="#" class="list-group-item list-group-item-action"></a>
-                            <a href="#" class="list-group-item list-group-item-action"></a>
-                            <a href="#" class="list-group-item list-group-item-action"></a>
-                            <a href="#" class="list-group-item list-group-item-action"></a>
-                            <a href="#" class="list-group-item list-group-item-action"></a>
-                            <a href="#" class="list-group-item list-group-item-action"></a>
-                            <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true"></a>
+                        </form>
+                        <div class="searchHistory">
+
                         </div>
+
+                        <!--
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action active">
+                                Last Cities Searched
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action"></a>
+                                <a href="#" class="list-group-item list-group-item-action"></a>
+                                <a href="#" class="list-group-item list-group-item-action"></a>
+                                <a href="#" class="list-group-item list-group-item-action"></a>
+                                <a href="#" class="list-group-item list-group-item-action"></a>
+                                <a href="#" class="list-group-item list-group-item-action"></a>
+                                <a href="#" class="list-group-item list-group-item-action"></a>
+                                <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1"aria-disabled="true"></a>
+                            </div>
+                        -->
                     </div>
-            </div>
-            <div class="col-10">
-            <div class="container">
-                <div class="row">
-                <div class="col"> <!-- area for cities-->
-                    <div class="jumbotron">
-                        <h4 class="text-4">Your Current Conditions</h4>
-                        <hr class="my-4">
-                        <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> -->
+                </div>
+                <div class="col-10">
+                    <div class="container">
                         <div class="row">
-                        <div class="weather-container align-items-center">
-                            <div class="row-flu"> <!--add row-fluid to auto sizing-->
-                                <p class="name">City of </p>
-                                <img class="icon">
-                                <p class="weather"></p>
-                            </div>
-                            <div class="row row-cols-2 align-self-center"> <!--add row-fluid to auto sizing-->
-                                <div class="col-sm">
-                                    <p class="temp">Temperature (°F): </p>
-                                    <p class = "humidity">Humidity %: </p>
-                                </div>
-                                <div class="col-sm">
-                                    <p class="wind">Wind (mph): </p>
-                                    <p class="uv"> UV Index (0-11+): </p>
+                            <div class="col">
+                                <!-- area for cities-->
+                                <div class="jumbotron">
+                                    <h4 class="text-4">Your Current Conditions</h4>
+                                    <hr class="my-4">
+                                    <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> -->
+                                    <div class="row">
+                                        <div class="weather-container align-items-center">
+                                            <div class="row-flu">
+                                                <!--add row-fluid to auto sizing-->
+                                                <p class="name">City of </p>
+                                                <img class="icon">
+                                                <p class="weather"></p>
+                                            </div>
+                                            <div class="row row-cols-2 align-self-center">
+                                                <!--add row-fluid to auto sizing-->
+                                                <div class="col-sm">
+                                                    <p class="temp">Temperature (°F): </p>
+                                                    <p class="humidity">Humidity %: </p>
+                                                </div>
+                                                <div class="col-sm">
+                                                    <p class="wind">Wind (mph): </p>
+                                                    <p class="uv"> UV Index (0-11+): </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                         <!-- Forecast -->
+                        <div class="container">
+                            <h6>5 Day Forecast</h6>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card1" style="width: 10rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <!--icon-->
+                                            <h6 class="card-subtitle mb-2 text-muted"></h6>
+                                            <!--city-->
+                                            <p class="card-text temp1">Temp: </p>
+                                            <!--high temp-->
+                                            <p class="card-text humidity1">humidity(%) </p>
+                                            <!--low temp-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card1" style="width: 10rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <!--icon-->
+                                            <h6 class="card-subtitle mb-2 text-muted name">City: </h6>
+                                            <!--city-->
+                                            <p class="card-text temp2">temp </p>
+                                            <!--high temp-->
+                                            <p class="card-text humidity2">humidity(%) </p>
+                                            <!--low temp-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card3" style="width: 10rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <!--icon-->
+                                            <h6 class="card-subtitle mb-2 text-muted"></h6>
+                                            <!--city-->
+                                            <p class="card-text temp3">temp </p>
+                                            <!--high temp-->
+                                            <p class="card-text humidity3">humidity(%) </p>
+                                            <!--low temp-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Fourth Day Forecast -->
+                                <div class="col">
+                                    <div class="card4" style="width: 10rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <!--icon-->
+                                            <h6 class="card-subtitle mb-2 text-muted"></h6>
+                                            <!--city-->
+                                            <p class="card-text temp4">temp </p>
+                                            <!--high temp-->
+                                            <p class="card-text humidity4">humidity(%) </p>
+                                            <!--low temp-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Fifth Day Forecast -->
+                                <div class="col">
+                                    <div class="card5" style="width: 10rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <!--icon-->
+                                            <h6 class="card-subtitle mb-2 text-muted"></h6>
+                                            <!--city-->
+                                            <p class="card-text temp5">temp </p>
+                                            <!--high temp-->
+                                            <p class="card-text humidity5">humidity(%) </p>
+                                            <!--low temp-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-                <div class="container"> 
-                    <h6>5 Day Forecast</h6>
-                    <div class="row">
-                        <div class="col">
-                        <div class="card1" style="width: 10rem;">
-                        <div class="card-body">
-                        <h5 class="card-title"></h5> <!--icon-->
-                        <h6 class="card-subtitle mb-2 text-muted"></h6> <!--city-->
-                        <p class="card-text temp1">temp </p> <!--high temp-->
-                        <p class="card-text humidity1">humidity(%)  </p> <!--low temp-->
-                        </div>
-                        </div>
-                        </div>
-                        <div class="col">
-                            <div class="card1" style="width: 10rem;">
-                        <div class="card-body">
-                        <h5 class="card-title"></h5> <!--icon-->
-                        <h6 class="card-subtitle mb-2 text-muted"></h6> <!--city-->
-                        <p class="card-text">temp </p> <!--high temp-->
-                        <p class="card-text">humidity(%) </p> <!--low temp-->
-                        </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card3" style="width: 10rem;">
-                        <div class="card-body">
-                            <h5 class="card-title"></h5> <!--icon-->
-                            <h6 class="card-subtitle mb-2 text-muted"></h6> <!--city-->
-                            <p class="card-text">temp </p> <!--high temp-->
-                            <p class="card-text">humidity(%) </p> <!--low temp-->
-                        </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card4" style="width: 10rem;">
-                        <div class="card-body">
-                            <h5 class="card-title"></h5> <!--icon-->
-                            <h6 class="card-subtitle mb-2 text-muted"></h6> <!--city-->
-                            <p class="card-text">temp </p> <!--high temp-->
-                            <p class="card-text">humidity(%) </p> <!--low temp-->
-                        </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card5" style="width: 10rem;">
-                        <div class="card-body">
-                            <h5 class="card-title"></h5> <!--icon-->
-                            <h6 class="card-subtitle mb-2 text-muted"></h6> <!--city-->
-                            <p class="card-text">temp </p> <!--high temp-->
-                            <p class="card-text">humidity(%) </p> <!--low temp-->
-                        </div>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-            </div>
             </div>
         </div>
     </div>
-  </div>
 
 
 
-        
+
 
     <!--city search-->
-        <!-- <strong>Search for a City:</strong><br>
+    <!-- <strong>Search for a City:</strong><br>
         <div class="search-container"> -->
-        <!--put in city search function here-->
-            <!-- <form>
+    <!--put in city search function here-->
+    <!-- <form>
                 <input type="text" placeholder="Search..." name="search" id="searchArea">
                 <button id="searchBtn">Submit</button>
             </form>
         </div> -->
-        <!--Change to bootstrap buttons or dropdown OR add links & make cities clickable-->
-            <!-- city: <h1 id="city1"></h1>
+    <!--Change to bootstrap buttons or dropdown OR add links & make cities clickable-->
+    <!-- city: <h1 id="city1"></h1>
             temperature: <h5 id="temp"></h5>
             icon: <img class="icon">
             <button id="city3">New York</button> -->
-            <!-- <button id="city4">Orlando</button>
+    <!-- <button id="city4">Orlando</button>
             <button id="city5">San Francisco</button>
             <button id="city6">Seattle</button>
             <button id="city7">Denver</button>
@@ -173,27 +207,27 @@
     <!-- </div>
 </div>-->
 
-<!-- column 2 needs 2 rows; 2nd has 5 col for 5-day -->
+    <!-- column 2 needs 2 rows; 2nd has 5 col for 5-day -->
 
 
-<!-- <div class="row"> -->
+    <!-- <div class="row"> -->
     <!-- <div class="col-lg-4 text-left"> -->
-        <!--put here  -->
-        <!--city search-->
-        <!-- <strong>Search for a City:</strong><br>
+    <!--put here  -->
+    <!--city search-->
+    <!-- <strong>Search for a City:</strong><br>
         <div class="search-container"> -->
-        <!--put in city search function here-->
-            <!-- <form>
+    <!--put in city search function here-->
+    <!-- <form>
                 <input type="text" placeholder="Search..." name="search" id="searchArea">
                 <button id="searchBtn">Submit</button>
             </form>
         </div> -->
-        <!--Change to bootstrap buttons or dropdown OR add links & make cities clickable-->
-            <!-- city: <h1 id="city1"></h1>
+    <!--Change to bootstrap buttons or dropdown OR add links & make cities clickable-->
+    <!-- city: <h1 id="city1"></h1>
             temperature: <h5 id="temp"></h5>
             icon: <img class="icon">
             <button id="city3">New York</button> -->
-            <!-- <button id="city4">Orlando</button>
+    <!-- <button id="city4">Orlando</button>
             <button id="city5">San Francisco</button>
             <button id="city6">Seattle</button>
             <button id="city7">Denver</button>
@@ -201,9 +235,9 @@
     <!-- </div>
     
     <div class="column-66"> -->
-        <!--weather display-->
-        <!-- <div class="row" id="day0"> -->
-             <!-- Current day weather
+    <!--weather display-->
+    <!-- <div class="row" id="day0"> -->
+    <!-- Current day weather
             <div id="Title"></div>
             <div id="day0temp"></div> 
             <div id="day0humid"></div>
@@ -224,7 +258,7 @@
     </div>
 </div> -->
 
-<!-- erase above -->
+    <!-- erase above -->
     <!-- </div>
     <div class="col-lg-8 col-lg-offset-4 text-center">
         <h2>City: <span id="city"></span></h2>
@@ -236,10 +270,10 @@
         <h2>Humidity: <span id="humidity"></span></h2>
     </div>
 </div> -->
-<!-- </div> -->
-  <!-- JavaScript links -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="./assets/scripts.js"></script>
+    <!-- </div> -->
+    <!-- JavaScript links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/scripts.js"></script>
 </body>
 
 </html>
