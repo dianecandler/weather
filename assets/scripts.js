@@ -6,16 +6,20 @@ $(document).ready(function () {
 
 	if (storedWeather === null) {
 		console.log("Nothing here")
-	} else if (storedWeather.length > 10) {
+	} else
+	// Better way to do this if time instead of loops:  var len = storedWeather.length>10 ? 10: storedWeather.length
+	if (storedWeather.length > 10) {
 		for (i = storedWeather.length - 10; i < storedWeather.length; i++) {
 			weatherSearch[weatherSearch.length] = storedWeather[i];
 			createBtn(storedWeather[i].name)
 		}
+				// add an event listener to an element // onclick is a event listener (eliminate error)
 	} else {
 		for (i = 0; i < storedWeather.length; i++) {
 			weatherSearch[weatherSearch.length] = storedWeather[i];
 			createBtn(storedWeather[i].name)
 		}
+
 	}
 
 
@@ -34,16 +38,14 @@ $(document).ready(function () {
 
 		$("searchBtn").text("");
 
-		// console.log(cityName);
 		$.getJSON(
 				//THIS WORKS
 				`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=2c820066ae7ac5a97f92d60b8422d7ff`,
 				function (data) {
 
-					console.log(data);
-					// console.log(data);
+					console.log(data);  //using to collect data outside Postman
+
 					var name = data.name;
-					// console.log(name);
 					var icon = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
 					var temp = Math.floor(data.main.temp);
 					var weather = data.weather[0].main;
@@ -56,16 +58,12 @@ $(document).ready(function () {
 					$('.temp').append(temp);
 					$('.humidity').append(humidity);
 					$('.wind').append(wind);
-
-
 				}
-
 			),
 
-
-			// weather API for UV, different from others, same site
+			// weather API for UV, different from city, icon, temp, humidity, weather, wind
 			$.getJSON(
-				//THIS WORKS
+				
 				`https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily&appid=2c820066ae7ac5a97f92d60b8422d7ff` +
 				name,
 				function (data) {
@@ -74,7 +72,7 @@ $(document).ready(function () {
 					$('.uv').append(uv);
 				}
 			),
-			//  FIVE DAY - working on - just started
+			//  Five Day Forecast
 			$.getJSON(
 				`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=imperial&appid=2c820066ae7ac5a97f92d60b8422d7ff`,
 				function (data) {
@@ -93,31 +91,31 @@ $(document).ready(function () {
 					var temp5 = data.list[32].main.temp;
 					var humidity5 = data.list[32].main.humidity;
 
-					//!! First Day Forecast
+					// First Day Forecast
 					$('.name').append(name);
 					// $('.icon').attr('src', icon);
 					$('.temp1').append(temp1);
 					$('.humidity1').append(humidity1);
 
-					//!! Second Day Forecast
+					// Second Day Forecast
 					$('.name').append(name);
 					// $('.icon').attr('src', icon);
 					$('.temp2').append(temp2);
 					$('.humidity2').append(humidity2);
 
-					//!! Third Day Forecast
+					// Third Day Forecast
 					$('.name').append(name);
 					// $('.icon').attr('src', icon);
 					$('.temp3').append(temp3);
 					$('.humidity3').append(humidity3);
 
-					//!! Fourth Day Forecast
+					// Fourth Day Forecast
 					$('.name').append(name);
 					// $('.icon').attr('src', icon);
 					$('.temp4').append(temp4);
 					$('.humidity4').append(humidity4);
 
-					//!! Fifth Day Forecast
+					// Fifth Day Forecast
 					$('.name').append(name);
 					// $('.icon').attr('src', icon);
 					$('.temp5').append(temp5);
@@ -128,7 +126,7 @@ $(document).ready(function () {
 
 	});
 	$(document).on("click", ".searchThis")
-
+	// Create button and search for city
 	function createBtn(cityName) {
 		var newBtn = $("<button class = 'searchThis'>")
 		newBtn.text(cityName)
