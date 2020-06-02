@@ -1,23 +1,27 @@
 body {
 	background-color: black;
-	color: darknavy;
+	color: gray;
+}
+button {
+    color:darkolivegreen;
 }
 .city-container {
 	font-size: 16px;
 	margin-top: 1%;
-	padding: 2%;
+    padding: 2%;
 }
 .weather-container {
 	font-size: 100%;
-    color: navy;
+    color: white;
     text-align: center;
-    background-color: lightskyblue;
+    background-color:darkolivegreen;
     padding: 2% 65% 2% 1%;
     text-align: center;
     margin: 5px;
 }
 .container {
     justify-content: center;
+    padding:20px 0;
 }
 .card-body {
 	background-color: grey;
@@ -29,19 +33,24 @@ h5 {
     justify-content: center;
     font-weight: bold;
     padding:1% 1% 1% 5%;
-    color:grey;
-    background-color:navy;
+    color: darkolivegreen;
+    background-color: lightgray;
+
 }
 .container-5D {
-    color:navy;
+    color: skyblue;
     margin-inline-start: auto;
     padding: 2;
     font-size: smallest(10px);
 }
 h6 {
-    font-size: large; 
+    font-size: 14px; 
     color: white;
 }
+.card-text {
+    color: white;
+}
+
 /* .item1{grid-area: menu; }
     .item2{grid-area: main; }
     .item3{grid-area: five;}

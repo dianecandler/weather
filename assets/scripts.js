@@ -2,26 +2,25 @@ $(document).ready(function () {
 	console.log('ready!'); //-- inside document function to test JQuery ready
 
 	var weatherSearch = [];
-	var storedWeather = JSON.parse(localStorage.getItem("weather"))
+	var storedWeather = JSON.parse(localStorage.getItem('weather'));
 
 	if (storedWeather === null) {
-		console.log("Nothing here")
-	} else
-	// Better way to do this if time instead of loops:  var len = storedWeather.length>10 ? 10: storedWeather.length
-	if (storedWeather.length > 10) {
+		console.log('Nothing here');
+	}
+	else if (storedWeather.length > 10) {
+		// Better way to do this if time instead of loops:  var len = storedWeather.length>10 ? 10: storedWeather.length
 		for (i = storedWeather.length - 10; i < storedWeather.length; i++) {
 			weatherSearch[weatherSearch.length] = storedWeather[i];
-			createBtn(storedWeather[i].name)
+			createBtn(storedWeather[i].name);
 		}
-				// add an event listener to an element // onclick is a event listener (eliminate error)
-	} else {
+		// add an event listener to an element // onclick is a event listener (eliminate error)
+	}
+	else {
 		for (i = 0; i < storedWeather.length; i++) {
 			weatherSearch[weatherSearch.length] = storedWeather[i];
-			createBtn(storedWeather[i].name)
+			createBtn(storedWeather[i].name);
 		}
-
 	}
-
 
 	$('#searchBtn').click(function (e) {
 		e.preventDefault();
@@ -32,54 +31,56 @@ $(document).ready(function () {
 
 		weatherSearch[weatherSearch.length] = {
 			name: cityName
-		}
-		localStorage.setItem("weather", JSON.stringify(weatherSearch))
-		createBtn(cityName)
+		};
+		localStorage.setItem('weather', JSON.stringify(weatherSearch));
+		createBtn(cityName);
 
-		$("searchBtn").text("");
+		$('searchBtn').text('');
 
 		$.getJSON(
-				//THIS WORKS
-				`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=2c820066ae7ac5a97f92d60b8422d7ff`,
-				function (data) {
+			//THIS WORKS
+			`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=2c820066ae7ac5a97f92d60b8422d7ff`,
+			function (data) {
+				console.log(data); //using to collect data outside Postman
 
-					console.log(data);  //using to collect data outside Postman
+				var name = data.name;
+				var icon = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
+				var temp = Math.floor(data.main.temp);
+				var weather = data.weather[0].main;
+				var humidity = data.main.humidity;
+				var wind = Math.floor(data.wind.speed);
 
-					var name = data.name;
-					var icon = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
-					var temp = Math.floor(data.main.temp);
-					var weather = data.weather[0].main;
-					var humidity = data.main.humidity;
-					var wind = Math.floor(data.wind.speed);
-
-					$('.name').append(name);
-					$('.icon').attr('src', icon);
-					$('.weather').append(weather);
-					$('.temp').append(temp);
-					$('.humidity').append(humidity);
-					$('.wind').append(wind);
-				}
-			),
-
+				$('.name').html('City of ' + name);
+				console.log(name);
+				$('.icon').attr('src', icon);
+				$('.weather').append(weather);
+				$('.temp').html('Temperature: ' + temp + '°');
+				$('.humidity').html('Humidity: ' + humidity + '%');
+				$('.wind').html('wind: ' + wind + 'mph');
+			}
+		),
 			// weather API for UV, different from city, icon, temp, humidity, weather, wind
 			$.getJSON(
-				
 				`https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily&appid=2c820066ae7ac5a97f92d60b8422d7ff` +
-				name,
+					name,
 				function (data) {
 					// console.log(data);
 					var uv = Math.floor(data.current.uvi);
-					$('.uv').append(uv);
+					$('.uv').html('UV Index: ' + uv);
 				}
 			),
 			//  Five Day Forecast
 			$.getJSON(
 				`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=imperial&appid=2c820066ae7ac5a97f92d60b8422d7ff`,
 				function (data) {
-
-
+					console.log(data);
+					var date1 = data.list[0].dt_txt;
 					var temp1 = data.list[0].main.temp;
 					console.log(temp1);
+					// var tempMin1 = data.list[0].main.temp-min;
+					// console.log(tempMin1);
+					// var tempMax1 = data.list[0].main.temp-max;
+					// console.log(tempMax1);
 					var humidity1 = data.list[0].main.humidity;
 					console.log(humidity1);
 					var temp2 = data.list[8].main.temp;
@@ -92,11 +93,14 @@ $(document).ready(function () {
 					var humidity5 = data.list[32].main.humidity;
 
 					// First Day Forecast
-					$('.name').append(name);
+					// $('.name').append(name);
 					// $('.icon').attr('src', icon);
+					// $('.date1').append(date1);
 					$('.temp1').append(temp1);
-					$('.humidity1').append(humidity1);
-
+					// $('.tempMin1').append("Min "+tempMin1+"°");
+					// $('.tempMax1').append("Max "+tempMax1+"°");
+					$('.humidity1').append(humidity1 + '%');
+					console.log(data);
 					// Second Day Forecast
 					$('.name').append(name);
 					// $('.icon').attr('src', icon);
@@ -122,15 +126,13 @@ $(document).ready(function () {
 					$('.humidity5').append(humidity5);
 				}
 			);
-
-
 	});
-	$(document).on("click", ".searchThis")
+	$(document).on('click', '.searchThis');
 	// Create button and search for city
-	function createBtn(cityName) {
-		var newBtn = $("<button class = 'searchThis'>")
-		newBtn.text(cityName)
-		$(".searchHistory").prepend(newBtn)
+	function createBtn (cityName) {
+		var newBtn = $("<button class = 'searchThis'>");
+		newBtn.text(cityName);
+		$('.searchHistory').prepend(newBtn);
 	}
 });
 
