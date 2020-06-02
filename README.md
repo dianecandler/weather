@@ -5,15 +5,15 @@ Diane's Weather Dashboard
 1. [x] Diagram project layout - column/rows
 2. [x] Confirm API works, generate data needed for project, 
         using JQuery, Ajax, JSON
-3. []  Identify bootstrap needed and plug into HTML, CSS 
-4. []  organize JS code into HTML and bootstrap
-5. []  Display current city data in CSS container
-6. []  Create 5 day data in JS
+3. [x]  Identify bootstrap needed and plug into HTML, CSS 
+4. [x]  organize JS code into HTML and bootstrap
+5. [x]  Display current city data in CSS container
+6. [x]  Create 5 day data in JS
 7. []  Tweak bootstrap boxes for 5 day forecast
-8. []  Create user input/search box for city choice
-9. []  Create display history boxes
+8. [x]  Create user input/search box for city choice
+9. [x]  Create display history boxes
 10.[]  Nice to have cities populated in empty history boxes
-11.[]  Set up local storage for cities
+11.[x]  Set up local storage for cities
 12.[]  Incrementally add search city & delete forced city
 13.[]  Finalize CSS and clean up files
 14.[]  Complete README.md with helpful links, learning, etc.
@@ -25,9 +25,10 @@ See DianeDiagram_HWweather1.png in Assets folder for design
 
 Lessons Learned:  
  - Diagramming project simplified col/row planning
- - Having tutor/TA resources available to help with setting up the API links when I needed assistance was the biggest concern for this project.
+ - Having tutor/TA resources available to help with setting up the API links when I needed assistance was the biggest concern for this project.  Found working with this APIs was fairly easy.
  - Starting with HTML before ensuring API worked added stress.
  - Once API links worked, creating the design and data scope creep challenges that had to be checked often.
+ - If I started over, I would implement bootstrap with grid system and deploy the framework better than what I have done here.  Out of time to replace CSS as I am working on the team project.
 
 Helpful link:  https://www.youtube.com/watch?v=InoAIgBZIEA
 OpenWeather:  https://openweathermap.org
