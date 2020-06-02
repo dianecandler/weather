@@ -13,7 +13,6 @@ $(document).ready(function () {
 			weatherSearch[weatherSearch.length] = storedWeather[i];
 			createBtn(storedWeather[i].name);
 		}
-		// add an event listener to an element // onclick is a event listener (eliminate error)
 	}
 	else {
 		for (i = 0; i < storedWeather.length; i++) {
@@ -74,13 +73,9 @@ $(document).ready(function () {
 				`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=imperial&appid=2c820066ae7ac5a97f92d60b8422d7ff`,
 				function (data) {
 					console.log(data);
-					var date1 = data.list[0].dt_txt;
-					var temp1 = data.list[0].main.temp;
+					// var date1 = data.list[0].dt_txt;
+					var temp1 = data.list[0].main.temp.toFixed(0);
 					console.log(temp1);
-					// var tempMin1 = data.list[0].main.temp-min;
-					// console.log(tempMin1);
-					// var tempMax1 = data.list[0].main.temp-max;
-					// console.log(tempMax1);
 					var humidity1 = data.list[0].main.humidity;
 					console.log(humidity1);
 					var temp2 = data.list[8].main.temp;
@@ -91,43 +86,45 @@ $(document).ready(function () {
 					var humidity4 = data.list[24].main.humidity;
 					var temp5 = data.list[32].main.temp;
 					var humidity5 = data.list[32].main.humidity;
-
+					var now = moment().format('LL');
+					var now2 = moment().add(1, 'days');
+					var now3 = moment().add(2, 'days');
+					var now4 = moment().add(3, 'days');
+					var now5 = moment().add(4, 'days');
+					console.log(now2);
 					// First Day Forecast
-					// $('.name').append(name);
-					// $('.icon').attr('src', icon);
-					// $('.date1').append(date1);
+
+					$('.date1').append(now);
+					$('.date2').append(now2);
 					$('.temp1').append(temp1 + '°F');
-					// $('.tempMin1').append("Min "+tempMin1+"°");
-					// $('.tempMax1').append("Max "+tempMax1+"°");
 					$('.humidity1').append(humidity1 + '%');
 					console.log(data);
 					// Second Day Forecast
-					$('.name').append(name);
+
 					// $('.icon').attr('src', icon);
 					$('.temp2').append(temp2 + '°F');
 					$('.humidity2').append(humidity2 + '%');
 
 					// Third Day Forecast
-					$('.name').append(name);
-					// $('.icon').attr('src', icon);
+					$('.date3').append(now3);
 					$('.temp3').append(temp3 + '°F');
 					$('.humidity3').append(humidity3 + '%');
 
 					// Fourth Day Forecast
-					$('.name').append(name);
+					$('.date4').append(now4);
 					// $('.icon').attr('src', icon);
 					$('.temp4').append(temp4 + '°F');
 					$('.humidity4').append(humidity4 + '%');
 
 					// Fifth Day Forecast
-					$('.name').append(name);
+					$('.date5').append(now5);
 					// $('.icon').attr('src', icon);
 					$('.temp5').append(temp5 + '°F');
 					$('.humidity5').append(humidity5 + '%');
 				}
 			);
 	});
-	$(document).on('click', '.searchThis');
+	$(document).on('click', '#searchThis');
 	// Create button and search for city
 	function createBtn (cityName) {
 		var newBtn = $("<button class = 'searchThis'>");

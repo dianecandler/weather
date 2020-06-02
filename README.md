@@ -19,9 +19,9 @@ Diane's Weather Dashboard
 14.[]  Complete README.md with helpful links, learning, etc.
 15.[]  Finalize GitHub and submit work in UT Bootcamp Folder
 
-+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + 
++ + +  
 See DianeDiagram_HWweather1.png in Assets folder for design 
-+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + 
++ + + 
 
 Lessons Learned:  
  - Diagramming project simplified col/row planning
