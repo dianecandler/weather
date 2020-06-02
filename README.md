@@ -1,23 +1,24 @@
-# weather
 # 06 Server-Side APIs: Weather Dashboard
 
+Project Links:  https://github.com/dianecandler/weather   
+                https://dianecandler.github.io/weather/
+
 Diane's Weather Dashboard
-1. [x] Diagram project layout - column/rows
-2. [x] Confirm API works, generate data needed for project, 
-        using JQuery, Ajax, JSON
-3. [x]  Identify bootstrap needed and plug into HTML, CSS 
-4. [x]  organize JS code into HTML and bootstrap
-5. [x]  Display current city data in CSS container
-6. [x]  Create 5 day data in JS
-7. []  Tweak bootstrap boxes for 5 day forecast
-8. [x]  Create user input/search box for city choice
-9. [x]  Create display history boxes
-10.[]  Nice to have cities populated in empty history boxes
-11.[x]  Set up local storage for cities
-12.[]  Incrementally add search city & delete forced city
-13.[]  Finalize CSS and clean up files
-14.[]  Complete README.md with helpful links, learning, etc.
-15.[]  Finalize GitHub and submit work in UT Bootcamp Folder
+1.  [x]  Diagram project layout - column/rows (stored in assets folder)
+2.  [x]  Confirm API works, generate data needed for project, 
+         using JQuery, Ajax, JSON
+3.  [x]  Add two additional APIs for UV and 5 day
+4.  [x]  Identify bootstrap needed and plug into HTML, CSS 
+5.  [x]  organize JS code into HTML and bootstrap
+6.  [x]  Display current city data in CSS container
+7.  [x]  Create 5 day data in JS
+8.  [x]  Tweak bootstrap boxes for 5 day forecast
+9.  [x]  Create user input/search box for city choice
+10. [x]  Create display history boxes
+11. [x]  Set up local storage for cities
+12. [x]  Finalize CSS and clean up files
+13. [x]  Complete README.md with helpful links, learning, etc.
+14. [x]  Finalize GitHub and submit work in UT Bootcamp Folder
 
 + + +  
 See DianeDiagram_HWweather1.png in Assets folder for design 
@@ -33,6 +34,7 @@ Lessons Learned:
 Helpful link:  https://www.youtube.com/watch?v=InoAIgBZIEA
 OpenWeather:  https://openweathermap.org
     Used 2 APIs in order to get all attributes desired 
+
 
 
 ==============================================================

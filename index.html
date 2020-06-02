@@ -1,11 +1,5 @@
-<!-- Diane's psuedo code for Saturday -->
-<!-- 1. Get weater api into JS file correctly -->
-<!-- 2. Link to display main city -->
-<!-- 3. Once basic link is established, work on HTML with Grid to match planned format -->
-<!-- container with 2 containers; (a)1 col 33% & row; (b) col 66% w/2 rows & 2nd row has 5 col -->
-<!-- 4. Activate current city with all attributes linked in current forecast -->
-<!-- 5. Establish links (of knowledge to do this) for 5 day forcast -->
-<!-- 6. Figure out where to source icons and create links in HTML  -->
+<!-- Diane's HW-6 Weather  -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,8 +13,6 @@
     <!-- jQuery links -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <!-- CSS link -->
     <link rel="stylesheet" href="./assets/style.css" />
 
     <title>HW-06 Weather Dashboard</title>
@@ -56,18 +48,14 @@
                                 <div class="jumbotron">
                                     <h4 class="text-4">Your Current Conditions</h4>
                                     <hr class="my-4">
-                                    <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> -->
                                     <div class="row">
                                         <div class="weather-container align-items-center">
-                                            <div class="row-flu">
-                                                <!--add row-fluid to auto sizing-->
- <!-- change name to date, add icon and high-low temps for 5-day? -->
+                                            <div class="row-flu">  <!--flu adds dynamics for screen size-->                                                <!--add row-fluid to auto sizing-->
                                                 <p class="name">City of </p>
                                                 <img class="icon">
                                                 <p class="weather"></p>
                                             </div>
                                             <div class="row row-cols-2 align-self-center">
-                                                <!--add row-fluid to auto sizing-->
                                                 <div class="col-sm">
                                                     <p class="temp"></p>
                                                     <p class="humidity"></p>
@@ -91,15 +79,10 @@
                                     <div class="card1" style="width: 10rem;">
                                         <div class="card-body">
                                             <h5 class="card-title"></h5>
-                                            <!-- date -->
                                             <p class="card-text date1"></p>
-                                            <!--icon-->
                                             <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                            <!--city-->
                                             <p class="card-text temp1">Temp: </p>
-                                            <!--high temp-->
                                             <p class="card-text humidity1">Humidity: </p>
-                                            <!--low temp-->
                                         </div>
                                     </div>
                                 </div>
@@ -108,15 +91,10 @@
                                     <div class="card2" style="width: 10rem;">
                                         <div class="card-body">
                                             <h5 class="card-title"></h5>
-                                            <!-- date -->
                                             <p class="card-text date2"></p>
-                                            <!--icon-->
                                             <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                            <!--city-->
                                             <p class="card-text temp2">Temp: </p>
-                                            <!--high temp-->
                                             <p class="card-text humidity2">Humidity: </p>
-                                            <!--low temp-->
                                         </div>
                                     </div>
                                 </div>
@@ -125,15 +103,10 @@
                                     <div class="card3" style="width: 10rem;">
                                         <div class="card-body">
                                             <h5 class="card-title"></h5>
-                                            <!-- date -->
                                             <p class="card-text date3"></p>
-                                            <!--icon-->
                                             <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                            <!--city-->
                                             <p class="card-text temp3">Temp: </p>
-                                            <!--high temp-->
                                             <p class="card-text humidity3">Humidity: </p>
-                                            <!--low temp-->
                                         </div>
                                     </div>
                                 </div>
@@ -142,15 +115,10 @@
                                     <div class="card4" style="width: 10rem;">
                                         <div class="card-body">
                                             <h5 class="card-title"></h5>
-                                            <!-- date -->
                                             <p class="card-text date4"></p>
-                                            <!--icon-->
                                             <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                            <!--city-->
                                             <p class="card-text temp4">Temp: </p> 
-                                            <!--high temp-->
                                             <p class="card-text humidity4">Humidity: </p>
-                                            <!--low temp-->
                                         </div>
                                     </div>
                                 </div>
@@ -159,15 +127,10 @@
                                     <div class="card5" style="width: 10rem;">
                                         <div class="card-body">
                                             <h5 class="card-title"></h5>
-                                            <!-- date -->
                                             <p class="card-text date5"></p>
-                                            <!--icon-->
                                             <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                            <!--city-->
                                             <p class="card-text temp5">Temp: </p>
-                                            <!--high temp-->
                                             <p class="card-text humidity5">Humidity: </p>
-                                            <!--low temp-->
                                         </div>
                                     </div>
                                 </div>
