@@ -54,9 +54,9 @@ $(document).ready(function () {
 				console.log(name);
 				$('.icon').attr('src', icon);
 				$('.weather').append(weather);
-				$('.temp').html('Temperature: ' + temp + '°');
+				$('.temp').html('Temp: ' + temp + '°');
 				$('.humidity').html('Humidity: ' + humidity + '%');
-				$('.wind').html('wind: ' + wind + 'mph');
+				$('.wind').html('Wind: ' + wind + 'mph');
 			}
 		),
 			// weather API for UV, different from city, icon, temp, humidity, weather, wind
@@ -96,7 +96,7 @@ $(document).ready(function () {
 					// $('.name').append(name);
 					// $('.icon').attr('src', icon);
 					// $('.date1').append(date1);
-					$('.temp1').append(temp1);
+					$('.temp1').append(temp1+"°F");
 					// $('.tempMin1').append("Min "+tempMin1+"°");
 					// $('.tempMax1').append("Max "+tempMax1+"°");
 					$('.humidity1').append(humidity1 + '%');
@@ -104,26 +104,26 @@ $(document).ready(function () {
 					// Second Day Forecast
 					$('.name').append(name);
 					// $('.icon').attr('src', icon);
-					$('.temp2').append(temp2);
-					$('.humidity2').append(humidity2);
+					$('.temp2').append(temp2+"°F");
+					$('.humidity2').append(humidity2 + '%');
 
 					// Third Day Forecast
 					$('.name').append(name);
 					// $('.icon').attr('src', icon);
-					$('.temp3').append(temp3);
-					$('.humidity3').append(humidity3);
+					$('.temp3').append(temp3+"°F");
+					$('.humidity3').append(humidity3 + '%');
 
 					// Fourth Day Forecast
 					$('.name').append(name);
 					// $('.icon').attr('src', icon);
-					$('.temp4').append(temp4);
-					$('.humidity4').append(humidity4);
+					$('.temp4').append(temp4+"°F");
+					$('.humidity4').append(humidity4 + '%');
 
 					// Fifth Day Forecast
 					$('.name').append(name);
 					// $('.icon').attr('src', icon);
-					$('.temp5').append(temp5);
-					$('.humidity5').append(humidity5);
+					$('.temp5').append(temp5+"°F");
+					$('.humidity5').append(humidity5 + '%');
 				}
 			);
 	});
