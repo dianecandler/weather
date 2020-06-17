@@ -109,7 +109,7 @@ $(document).ready(function () {
 			);
 	});
 	$(document).on('click', '#searchThis');
-	// Create button and search for city
+	// button and search for city
 	function createBtn (cityName) {
 		var newBtn = $("<button class = 'searchThis'>");
 		newBtn.text(cityName);
